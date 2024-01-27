@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200..800&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    /* background: #EEE; */
+    /* background: #f0e9d6c0; */
+    background-image: url("images/background.jpg");
+    font: 10px/13px 'Lucida Sans',sans-serif;
+ }
+ .wrap {
+    overflow: hidden;
+    margin: 50px;
+    margin-top: 15px !important;
+ }
+ .box {
+    float: left;
+    position: relative;
+    width: 33.33% !important;
+    padding-bottom: 56.25% !important;;
+ }
+ .boxInner {
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    top: 5px;
+    bottom: 5px;
+    overflow: hidden;
+ }
+ .boxInner img {
+    width: 100%;
+ }
+ .boxInner .titleBox {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: -50px;
+    background: #000;
+    background: rgba(0, 0, 0, 0.5);
+    color: #FFF;
+    padding: 10px;
+    text-align: center;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+ }
+ body.no-touch .boxInner:hover .titleBox, body.touch .boxInner.touchFocus .titleBox {
+    margin-bottom: 0;
+ }
+
+ #profilePicture, #profilePicture img {
+   position: relative;
+   width: 70px;
+   height: 70px;
+   display: block;
+   margin: 40px auto 20px;
+   border-radius: 40%;
+   -webkit-tap-highlight-color: transparent;
+}
+
+#userName {
+   color: white;
+   font-size: 1rem;
+   font-weight: 500;
+   line-height: 1.25;
+   display: block;
+   font-family: var(--font);
+   width: 100%;
+   text-align: center;
+   text-decoration: none;
+}
+
+#description {
+   padding-top: 5px;
+   color:white;
+   font-size: 0.5rem;
+   font-weight: 100;
+   line-height: 1.25;
+   display: block;
+   font-family: var(--font);
+   width: 100%;
+   text-align: center;
+   text-decoration: none;
+   font-style: italic;
+}
+
+.down-finger {
+   animation-name: point-down-animation;  /* Refers to the name of your @keyframes element below */
+   animation-duration: 1.5s;  /* Adjust the duration as needed */
+   animation-iteration-count: infinite;  /* Infinite pointing */
+   transform-origin: center center;  /* Pivot around the center */
+   display: inline-block;
+   font-size: 20px;
+}
+
+@keyframes point-down-animation {
+   0%, 100% {
+      transform: translateY(0) rotate(0); /* Original position, no rotation */
+   }
+   50% {
+      transform: translateY(7px) rotate(0deg); /* Slight downward motion with rotation */
+   }
+}
+
+
+ @media only screen and (max-width : 480px) {
+    /* Smartphone view: 1 tile */
+    .box {
+       width: 100%;
+       padding-bottom: 100%;
+    }
+ }
+ @media only screen and (max-width : 650px) and (min-width : 481px) {
+    /* Tablet view: 2 tiles */
+    .box {
+       width: 50%;
+       padding-bottom: 50%;
+    }
+ }
+ @media only screen and (max-width : 1050px) and (min-width : 651px) {
+    /* Small desktop / ipad view: 3 tiles */
+    .box {
+       width: 33.3%;
+       padding-bottom: 33.3%;
+    }
+ }
+ @media only screen and (max-width : 1290px) and (min-width : 1051px) {
+    /* Medium desktop: 4 tiles */
+    .box {
+       width: 25%;
+       padding-bottom: 25%;
+    }
+ }
